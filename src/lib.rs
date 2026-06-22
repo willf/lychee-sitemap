@@ -242,7 +242,7 @@ fn extract_links(html: &str, current: &Url, site_root: &Url) -> Vec<Url> {
         .filter_map(|el| el.value().attr("href"))
         .filter_map(|href| current.join(href).ok())
         .map(|url| normalize_url(&url))
-        .filter(|url| is_crawlable(url))
+        .filter(is_crawlable)
         .filter(|url| is_same_site(site_root, url))
         .collect()
 }
