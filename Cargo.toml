@@ -1,0 +1,22 @@
+[package]
+name = "lychee-sitemap"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.7", features = ["derive"] }
+quick-xml = "0.38.0"
+reqwest = { version = "0.12.5", default-features = false, features = [
+  "rustls-tls",
+  "gzip",
+  "brotli",
+  "deflate",
+] }
+scraper = "0.24.0"
+tokio = { version = "1.38.0", features = ["macros", "rt-multi-thread"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["fmt", "json", "time"] }
+url = "2.5.2"
+
+[dev-dependencies]
+tiny_http = "0.12.0"
