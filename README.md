@@ -7,6 +7,8 @@
 
 A Rust CLI that crawls a website recursively and emits a sitemap XML document.
 
+Architecture and testing details are documented in [ARCHITECTURE.md](ARCHITECTURE.md).
+
 ## Features
 
 - Recursive crawling from a starting URL
